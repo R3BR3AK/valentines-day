@@ -1,7 +1,5 @@
-// SECTION: Helpers
-const qs = (sel) => document.querySelector(sel);
 
-// SECTION: Reveal logic
+const qs = (sel) => document.querySelector(sel);
 const revealScreen = qs('#reveal-screen');
 const revealButton = qs('#reveal-button');
 const mainContent = qs('#main-content');
@@ -21,7 +19,6 @@ if (revealButton && revealScreen && mainContent) {
   });
 }
 
-// SECTION: Smooth scroll buttons
 const scrollToGameBtn = qs('#scroll-to-game');
 const scrollToTimelineBtn = qs('#scroll-to-timeline');
 
@@ -39,7 +36,6 @@ if (scrollToTimelineBtn) {
   });
 }
 
-// SECTION: Mini-game logic - find the correct heart
 const gameGrid = qs('#game-grid');
 const tentativasSpan = qs('#tentativas');
 const gameMessage = qs('#game-message');
@@ -55,14 +51,14 @@ function initGame() {
   gameGrid.innerHTML = '';
   tentativas = 0;
   gameLocked = false;
-  correctIndex = Math.floor(Math.random() * 8); // 8 hearts
+  correctIndex = Math.floor(Math.random() * 8); 
   tentativasSpan.textContent = tentativas.toString();
   gameMessage.textContent = 'Clique em um coração para tentar a sorte.';
 
   const totalHearts = 8;
   for (let i = 0; i < totalHearts; i++) {
     const btn = document.createElement('button');
-    const index = i; // evita capturar a variável do loop diretamente
+    const index = i; 
 
     btn.className = 'game-heart';
     btn.type = 'button';
@@ -76,7 +72,6 @@ function initGame() {
   }
 }
 
-// Cria um handler independente por botão, evitando funções anônimas no loop
 function createHeartHandler(index, btn) {
   return function () {
     handleGuess(index, btn);
@@ -96,7 +91,7 @@ function handleGuess(index, btn) {
     gameMessage.textContent =
       'ACERTOU! Entre todos os corações do mundo, você sempre escolhe o meu. 💖';
 
-    // pequeno efeito de "pulso" nas cartas ao ganhar
+    
     gameGrid.classList.add('game-win');
     setTimeout(() => gameGrid.classList.remove('game-win'), 700);
   } else {
@@ -111,6 +106,4 @@ if (resetButton) {
     initGame();
   });
 }
-
-// Inicializa o jogo ao carregar a página
 initGame();
