@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Surpresa de Dia dos Namorados</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- SECTION: Fullscreen Reveal -->
+    <div class="reveal-screen gradient-animate grain" id="reveal-screen">
+      <div class="reveal-inner shadow-dramatic">
+        <p class="reveal-eyebrow">Atenção, criatura favorita do universo</p>
+        <h1 class="reveal-title">Você foi convocado(a) para uma missão romântica</h1>
+        <p class="reveal-subtitle">
+          Só clique se você aceitar receber excesso de carinho, vergonha alheia e provas
+          incontestáveis de que eu te amo muito.
+        </p>
+        <button class="btn btn-primary glow" id="reveal-button">Clique para revelar</button>
+        <p class="reveal-footnote">(prometo que não é boleto, é amor)</p>
+      </div>
+
+      <!-- decoração de fundo -->
+      <div class="floating-heart floating-heart-1"></div>
+      <div class="floating-heart floating-heart-2"></div>
+      <div class="floating-heart floating-heart-3"></div>
+    </div>
+
+    <!-- SECTION: Conteúdo principal -->
+    <main class="page" id="main-content" aria-hidden="true">
+      <header class="hero">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <p class="hero-kicker">Feliz Dia dos Namorados</p>
+            <h2 class="hero-title">Oi, <span class="personalizavel" data-label="nome-parceiro">meu amor</span> 💘</h2>
+            <p class="hero-lead">
+              Este site foi feito especialmente para você. Ele contém quantidades
+              perigosas de fofura, memória afetiva e piadas internas sobre nós dois.
+            </p>
+            <p class="hero-lead hero-lead-alt">
+              Spoiler: no final tem um convite especial, então não vale fechar a aba.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-secondary" id="scroll-to-game">Ir direto para o joguinho</button>
+              <button class="btn btn-ghost" id="scroll-to-timeline">Ver nossa história</button>
+            </div>
+          </div>
+
+          <aside class="hero-card gradient-mesh shadow-soft">
+            <p class="hero-card-label">Mensagem personalizável</p>
+            <p class="hero-card-text">
+              "Eu poderia te escrever um textão aqui, mas a verdade é simples:
+              com você até fila de mercado vira passeio romântico." ✨
+            </p>
+            <p class="hero-card-footnote">(Você pode editar esse textinho no código e deixar 100% a nossa cara.)</p>
+          </aside>
+        </div>
+      </header>
+
+      <!-- SECTION: Mini-jogo -->
+      <section class="section" id="sec-game">
+        <div class="section-header">
+          <h3 class="section-title">Mini-jogo: ache o meu coração</h3>
+          <p class="section-subtitle">
+            Dentre todos esses corações, só um é o oficial. Se você acertar,
+            ganha uma chuva de amor (e talvez um presente, se o orçamento permitir).
+          </p>
+        </div>
+
+        <div class="game-panel gradient-border shadow-soft">
+          <div class="game-header">
+            <p class="game-label">Tentativas: <span id="tentativas">0</span></p>
+            <button class="btn btn-ghost btn-small" id="reset-game">Reiniciar jogo</button>
+          </div>
+
+          <div class="game-grid" id="game-grid" aria-label="Escolha um coração" role="list"></div>
+
+          <p class="game-message" id="game-message">
+            Clique em um coração para tentar a sorte.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION: Timeline do relacionamento -->
+      <section class="section" id="sec-timeline">
+        <div class="section-header">
+          <h3 class="section-title">Nossa história em momentos</h3>
+          <p class="section-subtitle">
+            Aqui você pode contar a nossa história, momento por momento.
+            Troque os textos e fotos para combinar com o nosso jeitinho.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <!-- ITEM EXEMPLO 1 -->
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content shadow-soft">
+              <div class="timeline-header-row">
+                <h4 class="timeline-title">O dia em que tudo começou</h4>
+                <span class="timeline-date">DD/MM/AAAA</span>
+              </div>
+              <p class="timeline-text">
+                Aqui você pode contar como a gente se conheceu: no app, na faculdade,
+                num rolê aleatório... vale tudo. O importante é que eu tive a sorte
+                gigantesca de te encontrar.
+              </p>
+              <figure class="timeline-photo">
+                <img
+                  src="https://images.pexels.com/photos/3693901/pexels-photo-3693901.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Foto ilustrativa de um casal sorrindo juntos"
+                />
+                <figcaption>Substitua por uma foto real desse dia inesquecível. 💌</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <!-- ITEM EXEMPLO 2 -->
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content shadow-soft">
+              <div class="timeline-header-row">
+                <h4 class="timeline-title">Nosso primeiro encontro oficial</h4>
+                <span class="timeline-date">DD/MM/AAAA</span>
+              </div>
+              <p class="timeline-text">
+                Aquele dia em que a gente fingiu ser gente séria, mas acabou rindo
+                de coisas idiotas e esquecendo do tempo.
+              </p>
+              <figure class="timeline-photo">
+                <img
+                  src="https://images.pexels.com/photos/8946070/pexels-photo-8946070.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Foto ilustrativa de um casal em um encontro divertido"
+                />
+                <figcaption>
+                  Troque por uma foto do nosso encontro (mesmo que seja só um print de chamada de vídeo!).
+                </figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <!-- ITEM EXEMPLO 3 -->
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content shadow-soft">
+              <div class="timeline-header-row">
+                <h4 class="timeline-title">Um momento que só a gente entende</h4>
+                <span class="timeline-date">DD/MM/AAAA</span>
+              </div>
+              <p class="timeline-text">
+                Aqui é o espaço oficial para registrar piadas internas, memes privados
+                e qualquer coisa que faça sentido só pra nós dois.
+              </p>
+              <figure class="timeline-photo">
+                <img
+                  src="https://images.pexels.com/photos/5637738/pexels-photo-5637738.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Foto ilustrativa de um casal rindo junto no sofá"
+                />
+                <figcaption>
+                  Coloque aqui a foto que faz você sorrir sem motivo.
+                </figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+
+        <div class="timeline-hint">
+          <p>
+            Para personalizar, basta trocar os textos, datas e os links das imagens no código.
+            Você também pode duplicar os blocos <code>&lt;article class="timeline-item"&gt; ...&lt;/article&gt;</code>
+            para adicionar mais momentos.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION: Final -->
+      <section class="section section-final">
+        <div class="final-card gradient-border shadow-soft">
+          <h3 class="section-title">Conclusão científica:</h3>
+          <p class="final-text">
+            Depois de uma análise detalhada (e totalmente imparcial), cheguei à
+            conclusão de que:
+          </p>
+          <p class="final-highlight">
+            Eu te amo hoje, te amei ontem e, se depender de mim, vou continuar te amando
+            por todos os próximos bugs e atualizações da nossa vida.
+          </p>
+          <p class="final-text">
+            Assinado: <span class="personalizavel" data-label="assinatura">seu(a) dev apaixonado(a)</span>.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
